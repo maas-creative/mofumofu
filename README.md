@@ -4,18 +4,40 @@ mofumofu is a coding-agent project focused on long-horizon autonomy and specific
 
 ## Install
 
-From a release artifact:
+Requirements:
+
+- Python 3.9+
+- Node.js 20+ on `PATH` for `mofu agent`
+
+From GitHub:
 
 ```sh
-python -m pip install mofumofu-0.1.0-py3-none-any.whl
+git clone https://github.com/maas-creative/mofumofu.git
+cd mofumofu
+python3 -m pip install .
+mofu --version
+mofu status --json
+```
+
+For editable development installs:
+
+```sh
+python3 -m pip install -e .
+python3 -m unittest discover -s tests -v
+```
+
+From a release artifact, when one has been downloaded from a release:
+
+```sh
+python3 -m pip install mofumofu-0.1.0-py3-none-any.whl
 mofu --version
 mofu agent --help
 ```
 
-From this source tree:
+From an already checked-out source tree:
 
 ```sh
-python -m pip install .
+python3 -m pip install .
 mofu status --json
 ```
 
@@ -24,7 +46,7 @@ The wheel includes the built mofumofu coding-agent runtime. Node.js 20+ must be 
 To uninstall:
 
 ```sh
-python -m pip uninstall mofumofu
+python3 -m pip uninstall mofumofu
 rm -rf ~/.config/mofumofu ~/.local/state/mofumofu ~/.mofumofu
 ```
 
@@ -35,16 +57,16 @@ The `rm -rf` line removes user and project state. Skip it when you want to keep 
 The release gate is the source of truth:
 
 ```sh
-python -m unittest discover -s tests -v
-python -m mofu gate status --spec product-release-baseline --json
-python -m mofu security scan --spec product-release-baseline --json
+python3 -m unittest discover -s tests -v
+python3 -m mofu gate status --spec product-release-baseline --json
+python3 -m mofu security scan --spec product-release-baseline --json
 ```
 
 For local model E2E with LM Studio:
 
 ```sh
 MOFUMOFU_LOCAL_BASE_URL=http://172.17.30.209:1234/v1 \
-  python -m mofu provider e2e --local-model qwen/qwen3.6-27b --json
+  python3 -m mofu provider e2e --local-model qwen/qwen3.6-27b --json
 ```
 
 Canonical implementation specs:
