@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+	"name": "mofumofu",
+	"vars": {
+		"ink": "#D9E6DF",
+		"mist": "#8EA39A",
+		"dimMist": "#62766E",
+		"deep": "#161A19",
+		"panel": "#202827",
+		"panelSoft": "#252E2C",
+		"selection": "#31413F",
+		"teal": "#65C3B3",
+		"blue": "#7AA7D9",
+		"green": "#8FCB9B",
+		"red": "#D67572",
+		"yellow": "#D8B45F",
+		"violet": "#A997D6"
+	},
+	"colors": {
+		"accent": "teal",
+		"border": "dimMist",
+		"borderAccent": "teal",
+		"borderMuted": "#3B4744",
+		"success": "green",
+		"error": "red",
+		"warning": "yellow",
+		"muted": "mist",
+		"dim": "dimMist",
+		"text": "ink",
+		"thinkingText": "mist",
+
+		"selectedBg": "selection",
+		"userMessageBg": "panelSoft",
+		"userMessageText": "ink",
+		"customMessageBg": "#28243A",
+		"customMessageText": "ink",
+		"customMessageLabel": "violet",
+		"toolPendingBg": "#222C35",
+		"toolSuccessBg": "#213126",
+		"toolErrorBg": "#352323",
+		"toolTitle": "ink",
+		"toolOutput": "mist",
+
+		"mdHeading": "yellow",
+		"mdLink": "blue",
+		"mdLinkUrl": "dimMist",
+		"mdCode": "teal",
+		"mdCodeBlock": "green",
+		"mdCodeBlockBorder": "dimMist",
+		"mdQuote": "mist",
+		"mdQuoteBorder": "dimMist",
+		"mdHr": "dimMist",
+		"mdListBullet": "teal",
+
+		"toolDiffAdded": "green",
+		"toolDiffRemoved": "red",
+		"toolDiffContext": "mist",
+
+		"syntaxComment": "#789286",
+		"syntaxKeyword": "#7AA7D9",
+		"syntaxFunction": "#D8B45F",
+		"syntaxVariable": "#A8DDE4",
+		"syntaxString": "#A6D189",
+		"syntaxNumber": "#EF9F76",
+		"syntaxType": "#65C3B3",
+		"syntaxOperator": "#D9E6DF",
+		"syntaxPunctuation": "#D9E6DF",
+
+		"thinkingOff": "#3B4744",
+		"thinkingMinimal": "dimMist",
+		"thinkingLow": "blue",
+		"thinkingMedium": "teal",
+		"thinkingHigh": "violet",
+		"thinkingXhigh": "#D19DE8",
+
+		"bashMode": "green"
+	},
+	"export": {
+		"pageBg": "deep",
+		"cardBg": "panel",
+		"infoBg": "#302D20"
+	}
+}
