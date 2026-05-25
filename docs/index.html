@@ -179,214 +179,23 @@
         flex: 0 0 auto;
       }
 
-      .product-preview {
+      .hero-visual {
         overflow: hidden;
         width: 100%;
         max-width: 100%;
-        border: 1px solid #293337;
+        margin: 0;
+        aspect-ratio: 16 / 10;
+        border: 1px solid #cbd7da;
         border-radius: var(--radius);
-        background: var(--panel);
+        background: #f5f8f8;
         box-shadow: var(--shadow);
       }
 
-      .preview-top {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        height: 41px;
-        padding: 0 15px;
-        border-bottom: 1px solid #344044;
-        color: #e8f0ed;
-        font-size: 13px;
-        font-weight: 720;
-      }
-
-      .traffic {
-        display: flex;
-        gap: 8px;
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-      }
-
-      .red {
-        background: #ff645d;
-      }
-
-      .yellow {
-        background: #ffbd4c;
-      }
-
-      .green {
-        background: #58c66d;
-      }
-
-      .preview-grid {
-        display: grid;
-        grid-template-columns: 1.05fr 1fr 0.72fr;
-        min-height: 430px;
-      }
-
-      .pane {
-        padding: 18px;
-        border-right: 1px solid #344044;
-      }
-
-      .pane:last-child {
-        border-right: 0;
-      }
-
-      .pane-title {
-        margin-bottom: 13px;
-        color: #5fd5d1;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .preview-note {
-        margin: 0 0 14px;
-        color: #a9b8ba;
-        font-size: 12px;
-        line-height: 1.45;
-      }
-
-      .terminal {
-        color: #d9e5df;
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-        font-size: 13px;
-        line-height: 1.7;
-        overflow-wrap: anywhere;
-      }
-
-      .terminal .ok {
-        color: #8ee06f;
-      }
-
-      .terminal .dim {
-        color: #8d9a9f;
-      }
-
-      .terminal .accent {
-        color: #77d8d2;
-      }
-
-      .table {
-        overflow: hidden;
-        border: 1px solid #334044;
-        border-radius: var(--radius);
-      }
-
-      .row {
-        display: grid;
-        grid-template-columns: 68px 1fr 72px;
-        align-items: center;
-        min-height: 34px;
-        padding: 0 12px;
-        border-bottom: 1px solid #2e393d;
-        color: #dce6e2;
-        font-size: 12px;
-      }
-
-      .row.header {
-        background: #20292c;
-        color: #f6fbf9;
-      }
-
-      .row:last-child {
-        border-bottom: 0;
-      }
-
-      .pass {
-        color: #8ee06f;
-        font-weight: 760;
-      }
-
-      .trace {
-        margin-top: 18px;
-        padding: 14px;
-        border: 1px solid #334044;
-        border-radius: var(--radius);
-      }
-
-      .trace-line {
-        display: grid;
-        grid-template-columns: 72px 54px 1fr;
-        align-items: center;
-        min-height: 28px;
-        color: #dce6e2;
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-        font-size: 11px;
-      }
-
-      .trace-rail {
-        height: 1px;
-        background: linear-gradient(90deg, var(--mint), #3d5652);
-        position: relative;
-      }
-
-      .trace-rail::before {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: 0;
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: var(--mint);
-      }
-
-      .gates {
-        display: grid;
-        gap: 10px;
-      }
-
-      .gate {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 39px;
-        padding: 0 11px;
-        border: 1px solid #334044;
-        border-radius: 6px;
-        color: #f5fbf8;
-        font-size: 13px;
-      }
-
-      .gate span:last-child {
-        padding: 4px 11px;
-        border: 1px solid #538d48;
-        border-radius: 4px;
-        color: #95e477;
-        font-size: 11px;
-        font-weight: 850;
-      }
-
-      .pass-card {
-        margin-top: 17px;
-        padding: 22px 18px;
-        border: 1px solid #334044;
-        border-radius: var(--radius);
-        background: #1a2224;
-        color: #f5fbf8;
-        text-align: center;
-      }
-
-      .pass-card strong {
+      .hero-visual img {
         display: block;
-        color: #93e275;
-        font-size: 31px;
-        line-height: 1;
-      }
-
-      .pass-card span {
-        display: block;
-        margin-top: 8px;
-        color: #dce6e2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .features {
@@ -499,19 +308,6 @@
           max-width: 760px;
         }
 
-        .preview-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .pane {
-          border-right: 0;
-          border-bottom: 1px solid #344044;
-        }
-
-        .pane:last-child {
-          border-bottom: 0;
-        }
-
         .feature-row {
           grid-template-columns: 68px 1fr;
           gap: 18px 22px;
@@ -568,7 +364,7 @@
         }
 
         .hero-copy,
-        .product-preview {
+        .hero-visual {
           max-width: 350px;
         }
 
@@ -582,14 +378,6 @@
           line-height: 1.04;
         }
 
-        .preview-grid {
-          min-height: 0;
-        }
-
-        .row {
-          grid-template-columns: 61px 1fr 62px;
-          padding: 0 9px;
-        }
       }
     </style>
   </head>
@@ -631,69 +419,14 @@
           </div>
         </div>
 
-        <div class="product-preview" aria-label="Conceptual mofumofu CLI workflow preview">
-          <div class="preview-top">
-            <div class="traffic" aria-hidden="true">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <span>CLI workflow preview</span>
-            <span></span>
-          </div>
-          <div class="preview-grid">
-            <section class="pane">
-              <div class="pane-title">Terminal command</div>
-              <p class="preview-note">Illustrative output from the CLI workflow, not a bundled web dashboard.</p>
-              <div class="terminal">
-                <div>$ mofu run --spec docs/requirements.md</div>
-                <div class="dim">provider: local · mode: agent · sandbox: workspace</div>
-                <br />
-                <div><span class="accent">loaded</span> specification authority</div>
-                <div><span class="ok">→</span> planned 42 tasks across 7 slices</div>
-                <div><span class="ok">→</span> linked code, tests, and evidence</div>
-                <div><span class="ok">✓</span> trace map complete</div>
-                <div><span class="ok">✓</span> all release gates passed</div>
-                <br />
-                <div class="ok">Done. Release approved.</div>
-              </div>
-            </section>
-
-            <section class="pane">
-              <div class="pane-title">Traceability model</div>
-              <p class="preview-note">The page visualizes the concepts mofumofu tracks while you work in the terminal.</p>
-              <div class="table" role="table" aria-label="Requirement status">
-                <div class="row header" role="row"><span>ID</span><span>Requirement</span><span>Status</span></div>
-                <div class="row" role="row"><span>REQ-001</span><span>Plan from spec</span><span class="pass">PASS</span></div>
-                <div class="row" role="row"><span>REQ-002</span><span>Trace edits</span><span class="pass">PASS</span></div>
-                <div class="row" role="row"><span>REQ-003</span><span>Verify gates</span><span class="pass">PASS</span></div>
-                <div class="row" role="row"><span>REQ-004</span><span>Audit changes</span><span class="pass">PASS</span></div>
-              </div>
-              <div class="trace" aria-label="Trace map">
-                <div class="pane-title">Trace map</div>
-                <div class="trace-line"><span>REQ-001</span><span class="trace-rail"></span><span>mofu/core.py:802</span></div>
-                <div class="trace-line"><span>REQ-002</span><span class="trace-rail"></span><span>tests/test_cli.py:193</span></div>
-                <div class="trace-line"><span>REQ-003</span><span class="trace-rail"></span><span>docs/tool-contracts.md</span></div>
-              </div>
-            </section>
-
-            <section class="pane">
-              <div class="pane-title">Release gates</div>
-              <p class="preview-note">Gate names and statuses are shown as a product concept preview.</p>
-              <div class="gates">
-                <div class="gate"><span>Tests</span><span>PASS</span></div>
-                <div class="gate"><span>Type check</span><span>PASS</span></div>
-                <div class="gate"><span>Security scan</span><span>PASS</span></div>
-                <div class="gate"><span>Spec coverage</span><span>PASS</span></div>
-                <div class="gate"><span>Build</span><span>PASS</span></div>
-              </div>
-              <div class="pass-card">
-                <strong>PASS</strong>
-                <span>Release approved</span>
-              </div>
-            </section>
-          </div>
-        </div>
+        <figure class="hero-visual" aria-label="mofumofu terminal-first workflow image">
+          <img
+            src="assets/hero-cli-terminal.jpg"
+            alt="A laptop on a desk showing a terminal workflow with passing checks beside a specification notebook."
+            width="1536"
+            height="960"
+          />
+        </figure>
       </section>
 
       <section class="features" aria-label="mofumofu capabilities">
