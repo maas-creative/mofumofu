@@ -36,17 +36,6 @@ The repository now contains a canonical implementation specification set. It is 
 8. [Implementation Plan](implementation-plan.md)
    Defines implementation slices, dependencies, acceptance criteria, and verification approach.
 
-## Reference Documents
-
-These documents are design inputs, not higher authority than the source-of-truth set above.
-
-- [Implementation Research](implementation-research.md)
-- [Fork Methodology](pi-customization-methodology.md)
-- [Research Basis](research-basis.md)
-- [Technology Candidates](technology-candidates.md)
-- [Coding-Agent Pain Points](competitor-pain-points.md)
-- [Implementation Readiness Research](implementation-readiness-research.md)
-
 ## Stable Product Decisions
 
 - Product name: `mofumofu`
