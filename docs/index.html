@@ -137,7 +137,7 @@
       h1 {
         margin: 0;
         max-width: 620px;
-        font-size: clamp(46px, 6vw, 80px);
+        font-size: clamp(44px, 5vw, 60px);
         line-height: 0.98;
         font-weight: 830;
         overflow-wrap: break-word;
@@ -148,6 +148,22 @@
         color: #3f4952;
         font-size: clamp(18px, 2.05vw, 22px);
         line-height: 1.45;
+      }
+
+      .tool-label {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        margin-bottom: 18px;
+        padding: 0 12px;
+        border: 1px solid #b8d7d5;
+        border-radius: 999px;
+        background: #eef8f7;
+        color: var(--teal-2);
+        font-size: 13px;
+        font-weight: 820;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
       }
 
       .hero-actions {
@@ -230,6 +246,13 @@
         font-weight: 800;
         letter-spacing: 0.08em;
         text-transform: uppercase;
+      }
+
+      .preview-note {
+        margin: 0 0 14px;
+        color: #a9b8ba;
+        font-size: 12px;
+        line-height: 1.45;
       }
 
       .terminal {
@@ -586,10 +609,11 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
+          <div class="tool-label">Terminal-first CLI tool</div>
           <h1 id="hero-title">Spec-led coding agents for traceable implementation</h1>
           <p class="lead">
-            mofumofu aligns to your specification, plans long-horizon work with
-            verifiable traceability, and only ships when every gate passes.
+            mofumofu is not a GUI app. It is a command-line workflow for
+            aligning agent work to specs, traceability, and release gates.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#install">
@@ -607,19 +631,20 @@
           </div>
         </div>
 
-        <div class="product-preview" aria-label="mofumofu terminal, trace map, and gate preview">
+        <div class="product-preview" aria-label="Conceptual mofumofu CLI workflow preview">
           <div class="preview-top">
             <div class="traffic" aria-hidden="true">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <span>mofumofu</span>
+            <span>CLI workflow preview</span>
             <span></span>
           </div>
           <div class="preview-grid">
             <section class="pane">
-              <div class="pane-title">Terminal</div>
+              <div class="pane-title">Terminal command</div>
+              <p class="preview-note">Illustrative output from the CLI workflow, not a bundled web dashboard.</p>
               <div class="terminal">
                 <div>$ mofu run --spec docs/requirements.md</div>
                 <div class="dim">provider: local · mode: agent · sandbox: workspace</div>
@@ -635,7 +660,8 @@
             </section>
 
             <section class="pane">
-              <div class="pane-title">Requirements</div>
+              <div class="pane-title">Traceability model</div>
+              <p class="preview-note">The page visualizes the concepts mofumofu tracks while you work in the terminal.</p>
               <div class="table" role="table" aria-label="Requirement status">
                 <div class="row header" role="row"><span>ID</span><span>Requirement</span><span>Status</span></div>
                 <div class="row" role="row"><span>REQ-001</span><span>Plan from spec</span><span class="pass">PASS</span></div>
@@ -652,7 +678,8 @@
             </section>
 
             <section class="pane">
-              <div class="pane-title">Gates</div>
+              <div class="pane-title">Release gates</div>
+              <p class="preview-note">Gate names and statuses are shown as a product concept preview.</p>
               <div class="gates">
                 <div class="gate"><span>Tests</span><span>PASS</span></div>
                 <div class="gate"><span>Type check</span><span>PASS</span></div>
