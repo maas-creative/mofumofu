@@ -1,6 +1,6 @@
 # mofumofu
 
-mofumofu is a coding-agent project focused on long-horizon autonomy and specification-code consistency.
+mofumofu is a terminal-first coding-agent control plane focused on long-horizon autonomy and specification-code consistency.
 
 ## Install
 
@@ -54,20 +54,24 @@ The `rm -rf` line removes user and project state. Skip it when you want to keep 
 
 ## Release Verification
 
-The release gate is the source of truth:
+Run the public smoke checks before opening a release PR:
 
 ```sh
 python3 -m unittest discover -s tests -v
-python3 -m mofu gate status --spec product-release-baseline --json
-python3 -m mofu security scan --spec product-release-baseline --json
+python3 -m mofu security scan --json
+python3 -m mofu wrapper status --json
 ```
 
-For local model E2E with LM Studio:
+For local OpenAI-compatible model E2E, point mofumofu at a local server such as LM Studio, Ollama, or vLLM:
 
 ```sh
-MOFUMOFU_LOCAL_BASE_URL=http://172.17.30.209:1234/v1 \
+MOFUMOFU_LOCAL_BASE_URL=http://localhost:1234/v1 \
   python3 -m mofu provider e2e --local-model qwen/qwen3.6-27b --json
 ```
+
+## Runtime Packaging
+
+The Python package includes a built copy of the vendored coding-agent runtime under `mofu/agent_runtime`. This keeps `mofu agent` usable after `pip install .` without requiring a local TypeScript build. Source for the fork base is preserved under `vendor/pi` with upstream MIT notices.
 
 Canonical implementation specs:
 

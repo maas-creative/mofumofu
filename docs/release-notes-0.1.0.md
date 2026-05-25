@@ -10,11 +10,10 @@ This release packages mofumofu as a provider-neutral coding-agent control plane 
 
 - `python3 -m unittest discover -s tests -v`: PASS
 - `npm --prefix vendor/pi run build --workspace @mofumofu/coding-agent`: PASS
-- `MOFUMOFU_LOCAL_BASE_URL=http://172.17.30.209:1234/v1 python3 -m mofu provider e2e --local-model qwen/qwen3.6-27b --json`: local LM Studio E2E PASS
-- `python3 -m mofu security generated-e2e --spec product-release-baseline --json`: PASS
-- `python3 -m mofu security scan --spec product-release-baseline --json`: PASS
+- `MOFUMOFU_LOCAL_BASE_URL=http://localhost:1234/v1 python3 -m mofu provider e2e --local-model qwen/qwen3.6-27b --json`: local OpenAI-compatible provider E2E PASS
+- `python3 -m mofu security scan --json`: PASS
+- `python3 -m mofu wrapper status --json`: PASS
 - `npm --prefix vendor/pi audit --omit=dev --json`: 0 production vulnerabilities
-- `python3 -m mofu gate status --spec product-release-baseline --json`: PASS
 
 ## Packaging
 

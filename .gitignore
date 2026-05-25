@@ -7,6 +7,8 @@ __pycache__/
 .env.*
 !.env.example
 
+.mofumofu/
+
 dist/
 build/
 *.egg-info/

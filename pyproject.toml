@@ -9,6 +9,22 @@ description = "Provider-neutral coding-agent control plane focused on spec/code 
 requires-python = ">=3.9"
 readme = "README.md"
 license = "MIT"
+authors = [{ name = "MaaS Creative" }]
+keywords = ["ai", "coding-agent", "cli", "llm", "specification"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development",
+]
+
+[project.urls]
+Homepage = "https://maas-creative.github.io/mofumofu/"
+Repository = "https://github.com/maas-creative/mofumofu"
+Issues = "https://github.com/maas-creative/mofumofu/issues"
 
 [tool.setuptools]
 packages = ["mofu"]
