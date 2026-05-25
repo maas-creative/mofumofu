@@ -245,8 +245,8 @@ Purpose: deterministic context selected for a model call.
   ],
   "omitted": [
     {
-      "path": "docs/research-basis.md",
-      "reason": "Reference-only document not needed for this edit."
+      "path": "docs/requirements.md",
+      "reason": "Canonical requirements were already covered by the trace map."
     }
   ],
   "traceLinks": ["trace_001"]
